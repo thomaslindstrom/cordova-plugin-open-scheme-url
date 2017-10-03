@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-open-scheme-url",
+  "version": "0.0.1",
+  "description": "Open a scheme url/deep link.",
+  "cordova": {
+    "id": "cordova-plugin-open-scheme-url",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomaslindstrom/cordova-plugin-open-scheme-url.git"
+  },
+  "keywords": [
+    "cordova",
+    "open",
+    "scheme",
+    "url",
+    "deep",
+    "link",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Thomas Lindstrøm <t@hom.as>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomaslindstrom/cordova-plugin-open-scheme-url/issues"
+  },
+  "homepage": "https://github.com/thomaslindstrom/cordova-plugin-open-scheme-url#readme"
+}
