@@ -17,4 +17,14 @@
         <header-file src="src/ios/OpenSchemeUrl.h" />
         <source-file src="src/ios/OpenSchemeUrl.m" />
     </platform>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="OpenSchemeUrl">
+                <param name="android-package" value="OpenSchemeUrl"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/OpenSchemeUrl.java" />
+    </platform>
 </plugin>

@@ -5,7 +5,8 @@
   "cordova": {
     "id": "cordova-plugin-open-scheme-url",
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "repository": {
@@ -20,7 +21,8 @@
     "deep",
     "link",
     "ecosystem:cordova",
-    "cordova-ios"
+    "cordova-ios",
+    "cordova-android"
   ],
   "author": "Thomas Lindstrøm <t@hom.as>",
   "license": "ISC",

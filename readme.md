@@ -12,3 +12,8 @@ Opens a scheme url/deep url.
 const {OpenSchemeUrl} = window.cordova.plugins;
 OpenSchemeUrl.open('itms-apps://itunes.apple.com/no/app/youtube/id544007664');
 ```
+
+```javascript
+const {OpenSchemeUrl} = window.cordova.plugins;
+OpenSchemeUrl.open('market://details?id=com.google.android.youtube');
+```
