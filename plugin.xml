@@ -25,6 +25,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/OpenSchemeUrl.java" />
+        <source-file src="src/android/OpenSchemeUrl.java" target-dir="src/org/apache/cordova/openschemeurl" />
     </platform>
 </plugin>
