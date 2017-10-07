@@ -2,14 +2,18 @@
  * src/android: OpenSchemeUrl.java
 **/
 
-package org.apache.cordova.plugin;
+package no.amphibian.openschemeurl;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
+
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+
 
 public class OpenSchemeUrl extends CordovaPlugin {
     @Override public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -24,15 +28,16 @@ public class OpenSchemeUrl extends CordovaPlugin {
 
     private void open(String url, CallbackContext callbackContext) {
         try {
+            Context context = this.cordova.getActivity().getApplicationContext();
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(url));
-            startActivity(intent);
+            context.startActivity(intent);
 
             callbackContext.success();
         }
 
         catch (android.content.ActivityNotFoundException error) {
-            callbackContext.error(error);
+            callbackContext.error(error.getMessage());
         }
     }
 }
