@@ -10,7 +10,7 @@
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="OpenSchemeUrl">
-                <param name="ios-package" value="OpenSchemeUrl"/>
+                <param name="ios-package" value="OpenSchemeUrl" />
             </feature>
         </config-file>
 
@@ -21,7 +21,8 @@
     <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="OpenSchemeUrl">
-                <param name="android-package" value="no.amphibian.openschemeurl"/>
+                <param name="android-package" value="no.amphibian.openschemeurl" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
 
