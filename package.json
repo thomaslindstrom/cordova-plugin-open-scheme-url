@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-open-scheme-url",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Open a scheme url/deep link.",
   "cordova": {
     "id": "cordova-plugin-open-scheme-url",
