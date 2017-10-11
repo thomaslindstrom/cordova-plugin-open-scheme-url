@@ -2,7 +2,7 @@
  * src/android: OpenSchemeUrl.java
 **/
 
-package no.amphibian.OpenSchemeUrl;
+package no.amphibian.openschemeurl;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
