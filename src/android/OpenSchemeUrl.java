@@ -28,8 +28,8 @@ public class OpenSchemeUrl extends CordovaPlugin {
     private void open(String url, CallbackContext callbackContext) {
         try {
             Context context = this.cordova.getActivity().getApplicationContext();
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse(url));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
 
             callbackContext.success();
