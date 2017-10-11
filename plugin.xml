@@ -21,11 +21,11 @@
     <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="OpenSchemeUrl">
-                <param name="android-package" value="no.amphibian.openschemeurl" />
+                <param name="android-package" value="no.amphibian.OpenSchemeUrl" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
 
-        <source-file src="src/android/OpenSchemeUrl.java" target-dir="src/no/amphibian/openschemeurl" />
+        <source-file src="src/android/OpenSchemeUrl.java" target-dir="src/no/amphibian" />
     </platform>
 </plugin>
