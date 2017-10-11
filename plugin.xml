@@ -21,7 +21,7 @@
     <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="OpenSchemeUrl">
-                <param name="android-package" value="no.amphibian.openschemeurl" />
+                <param name="android-package" value="no.amphibian.openschemeurl.OpenSchemeUrl" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
