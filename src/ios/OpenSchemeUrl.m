@@ -7,18 +7,18 @@
 
 @implementation OpenSchemeUrl
     - (void) open: (CDVInvokedUrlCommand*) command {
-        @try {
-            NSString* url = [command.arguments objectAtIndex:0];
+        NSString* url = [command.arguments objectAtIndex:0];
 
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
-            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-        }
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{} completionHandler:^(BOOL success) {
+            CDVPluginResult* pluginResult = nil;
 
-        @catch (NSException *exception) {
-            NSString* reason = [exception reason];
-            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:reason];
+            if (success) {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+            } else {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"URL schema not handled."];
+            }
+
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-        }
+        }];
     }
 @end;
